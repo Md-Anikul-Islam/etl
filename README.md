@@ -1,14 +1,37 @@
-# Project Setup
-composer update
-# Project Setup .env
+## all steps to run the project
+```
+git init
+```
+```
+git remote add origin https://github.com/Md-Anikul-Islam/inventory-mini.git
+```
+```
+git pull origin main
+```
+```
 cp .env.example .env
-# Project Setup Key
+```
+
+```
 php artisan key:generate
-# Project Setup migrate
+```
+
+```
+composer update
+```
+```
+cp .env.example .env
+```
+```
+php artisan key:generate
+```
+```
 php artisan migrate
-# Create Permission
+```
+```
 php artisan db:seed --class=PermissionTableSeeder
-# Admin Create
+```
+
+```
 php artisan db:seed --class=CreateAdminUserSeeder
-
-
+```
