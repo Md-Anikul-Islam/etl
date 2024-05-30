@@ -15,13 +15,11 @@ class PermissionTableSeeder extends Seeder
     {
         $permissions = [
             //For roll and permission
+            'role-and-permission-list',
             'role-list',
             'role-create',
             'role-edit',
             'role-delete',
-
-            //For Role and permission
-            'role-and-permission-list',
 
             //For Resource
             'resource-list',
@@ -38,29 +36,11 @@ class PermissionTableSeeder extends Seeder
             'team-edit',
             'team-delete',
 
-            //For About
-            'about-list',
-            'about-create',
-            'about-edit',
-            'about-delete',
-
-            //For Slider
-            'slider-list',
-            'slider-create',
-            'slider-edit',
-            'slider-delete',
-
-
-            //For News
-            'news-list',
-            'news-create',
-            'news-edit',
-            'news-delete',
-
             //Site Setting
             'site-setting',
 
             //Dashboard
+            'cart-list',
             'login-log-list',
 
 

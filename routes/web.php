@@ -53,34 +53,12 @@ Route::get('/', function () {
 Route::middleware('auth')->group(callback: function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     Route::get('/unauthorized-action', [AdminDashboardController::class, 'unauthorized'])->name('unauthorized.action');
-    //News Section
-    Route::get('/news-section', [NewsController::class, 'index'])->name('news.section');
-    Route::post('/news-store', [NewsController::class, 'store'])->name('news.store');
-    Route::put('/news-update/{id}', [NewsController::class, 'update'])->name('news.update');
-    Route::get('/news-delete/{id}', [NewsController::class, 'destroy'])->name('news.destroy');
-
-
-
-
 
     //Team Section
     Route::get('/team-section', [TeamController::class, 'index'])->name('team.section');
     Route::post('/team-store', [TeamController::class, 'store'])->name('team.store');
     Route::put('/team-update/{id}', [TeamController::class, 'update'])->name('team.update');
     Route::get('/team-delete/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
-
-    //About Section
-    Route::get('/about-section', [AboutController::class, 'index'])->name('about.section');
-    Route::post('/about-store', [AboutController::class, 'store'])->name('about.store');
-    Route::put('/about-update/{id}', [AboutController::class, 'update'])->name('about.update');
-    Route::get('/about-delete/{id}', [AboutController::class, 'destroy'])->name('about.destroy');
-
-
-    //Slider Section
-    Route::get('/slider-section', [SliderController::class, 'index'])->name('slider.section');
-    Route::post('/slider-store', [SliderController::class, 'store'])->name('slider.store');
-    Route::put('/slider-update/{id}', [SliderController::class, 'update'])->name('slider.update');
-    Route::get('/slider-delete/{id}', [SliderController::class, 'destroy'])->name('slider.destroy');
 
     //Role and User Section
     Route::resource('roles', RoleController::class);

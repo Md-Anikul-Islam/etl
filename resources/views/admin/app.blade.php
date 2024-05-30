@@ -111,46 +111,15 @@
                     </a>
                     <div class="collapse" id="sidebarPages">
                         <ul class="side-nav-second-level">
-                            @can('news-list')
+                            @can('team-list')
                             <li>
-                                <a href="{{route('news.section')}}">News</a>
+                                <a href="{{route('team.section')}}">Team</a>
                             </li>
                             @endcan
                         </ul>
                     </div>
                 </li>
                 @endcan
-
-                @can('slider-list')
-                <li class="side-nav-item">
-                    <a href="{{route('slider.section')}}" class="side-nav-link">
-                        <i class="ri-slideshow-line"></i>
-                        <span> Slider </span>
-                    </a>
-                </li>
-                @endcan
-
-
-
-                @can('about-list')
-                <li class="side-nav-item">
-                    <a href="{{route('about.section')}}" class="side-nav-link">
-                        <i class=" ri-pencil-fill"></i>
-                        <span> About </span>
-                    </a>
-                </li>
-                @endcan
-
-
-                @can('team-list')
-                <li class="side-nav-item">
-                    <a href="{{route('team.section')}}" class="side-nav-link">
-                        <i class="ri-team-line"></i>
-                        <span> Team </span>
-                    </a>
-                </li>
-                @endcan
-
 
                 @can('site-setting')
                     <li class="side-nav-item">
