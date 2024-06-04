@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AboutController;
 use App\Http\Controllers\admin\AdminDashboardController;
+use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\CounterController;
 use App\Http\Controllers\admin\LabSetupController;
 use App\Http\Controllers\admin\MenuController;
@@ -59,6 +60,13 @@ Route::middleware('auth')->group(callback: function () {
     Route::post('/team-store', [TeamController::class, 'store'])->name('team.store');
     Route::put('/team-update/{id}', [TeamController::class, 'update'])->name('team.update');
     Route::get('/team-delete/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
+
+    //Category Section
+    Route::get('/category-section', [CategoryController::class, 'index'])->name('category.section');
+    Route::post('/category-store', [CategoryController::class, 'store'])->name('category.store');
+    Route::put('/category-update/{id}', [CategoryController::class, 'update'])->name('category.update');
+    Route::get('/category-delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
 
     //Role and User Section
     Route::resource('roles', RoleController::class);

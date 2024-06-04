@@ -117,6 +117,13 @@
                             </li>
                             @endcan
                         </ul>
+                        <ul class="side-nav-second-level">
+                            @can('category-list')
+                                <li>
+                                    <a href="{{route('category.section')}}">Category</a>
+                                </li>
+                            @endcan
+                        </ul>
                     </div>
                 </li>
                 @endcan

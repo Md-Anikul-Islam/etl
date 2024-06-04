@@ -36,6 +36,12 @@ class PermissionTableSeeder extends Seeder
             'team-edit',
             'team-delete',
 
+            //For Category
+            'category-list',
+            'category-create',
+            'category-edit',
+            'category-delete',
+
             //Site Setting
             'site-setting',
 

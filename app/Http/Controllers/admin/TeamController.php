@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\Gate;
 use Toastr;
 class TeamController extends Controller
 {
-
-
     public function __construct()
     {
         $this->middleware('auth');

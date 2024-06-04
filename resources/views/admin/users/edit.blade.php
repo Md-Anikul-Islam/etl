@@ -1,5 +1,19 @@
 @extends('admin.app')
 @section('admin_content')
+    <link href="{{asset('backend/select2/select2.min.css')}}" rel="stylesheet" />
+    <script src="{{asset('backend/select2/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('backend/select2/select2.min.js')}}"></script>
+
+    <style>
+        .select2-container--default.select2-container--focus .select2-selection--multiple {
+            background: #313a46 !important;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+            color: black;
+        }
+    </style>
+
+
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
@@ -63,7 +77,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Role:</strong>
-                {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
+                {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control js-example-basic-multiple','multiple' => 'multiple')) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -71,5 +85,9 @@
         </div>
     </div>
     {!! Form::close() !!}
-
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
 @endsection
